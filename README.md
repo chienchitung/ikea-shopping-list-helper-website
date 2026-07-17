@@ -4,6 +4,8 @@ A small, static landing page for **IKEA Shopping List Helper**, an unofficial
 browser extension that lets you build and manage an IKEA shopping list
 without ever logging in.
 
+![Landing page screenshot](docs/screenshot-hero.png)
+
 This repo contains only the marketing/landing site (HTML/CSS/JS, no build
 step). The extension itself lives in a separate repository:
 [ikea-wishlist-extension](https://github.com/chienchitung/ikea-wishlist-extension).
@@ -37,25 +39,38 @@ Everything runs locally in the browser — nothing is ever collected, sent
 to a server, or shared with the developer. See [`privacy.html`](./privacy.html)
 for the full privacy policy.
 
+## Page sections
+
+`index.html` is a single-page layout with anchor navigation in the header
+(How it works / Features / FAQ) that smooth-scrolls to each section:
+
+Hero → How it works → Features → CTA → FAQ (accordion) → Footer
+
 ## Project structure
 
 ```
 .
-├── index.html          # Landing page (hero, how it works, features, CTA)
-├── privacy.html         # Privacy policy page
+├── index.html           # Landing page (hero, how it works, features, CTA, FAQ)
+├── privacy.html          # Privacy policy page
+├── favicon.svg            # Site icon, referenced by both pages
+├── docs/
+│   └── screenshot-hero.png # Screenshot used in this README
 └── assets/
-    ├── style.css         # Shared styles for both pages
-    ├── i18n.js            # Translation strings + locale detection/switching
-    └── main.js            # Wires up the language-switcher dropdown
+    ├── style.css           # Shared styles for both pages
+    ├── i18n.js              # Translation strings + locale detection/switching
+    └── main.js              # Language-switcher + FAQ-accordion wiring
 ```
 
 ## Internationalization
 
 The site supports 11 languages via `assets/i18n.js`. Elements are marked
-with a `data-i18n="key.path"` attribute in the HTML, and `i18n.js` swaps in
-the translated string for the locale currently selected in the header
-dropdown. The chosen locale is persisted in `localStorage` so it stays
-consistent across `index.html` and `privacy.html`.
+with a `data-i18n="key.path"` attribute (or `data-i18n-html="key.path"` for
+the few strings that need embedded markup, like a manual `<br>` in the hero
+title for languages where forcing a specific line break reads better), and
+`i18n.js` swaps in the translated string for the locale currently selected
+in the header dropdown. The site always opens in **English** by default;
+once a visitor picks another language it's persisted in `localStorage`, so
+the choice stays consistent across `index.html` and `privacy.html`.
 
 ## Running locally
 
@@ -70,7 +85,7 @@ python3 -m http.server 8000
 ## Disclaimer
 
 This is an independently built, unofficial tool. It is not affiliated
-with, endorsed by, or connected to Inter IKEA Systems B.V. in any way.
+with Inter IKEA Systems B.V. in any way.
 
 ## License
 
