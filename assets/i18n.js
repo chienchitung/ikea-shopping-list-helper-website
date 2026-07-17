@@ -95,7 +95,7 @@
       "nav.features": "功能特色",
       "nav.faq": "常見問題",
       "hero.eyebrow": "非官方 Chrome 擴充功能",
-      "hero.title": "你的 IKEA 採購清單，不用登入",
+      "hero.title": "你的 IKEA 採購清單，<br>不用登入",
       "hero.lead": "在全球 45+ 國家的 IKEA 官網逛商品時一鍵收藏，依空間分類整理，金額自動加總，最後匯出 PDF 或用 Email 寄送——完全不需要 IKEA 帳號。",
       "hero.ctaPrimary": "取得擴充功能",
       "hero.finePrint": "免費，資料完全不會離開你的裝置。",
@@ -176,7 +176,7 @@
       "nav.features": "功能特色",
       "nav.faq": "常见问题",
       "hero.eyebrow": "非官方 Chrome 扩展程序",
-      "hero.title": "你的宜家采购清单，不用登录",
+      "hero.title": "你的宜家采购清单，<br>不用登录",
       "hero.lead": "在全球 45+ 个国家的宜家官网逛商品时一键收藏，按空间分类整理，金额自动合计，最后导出 PDF 或用邮件发送——完全不需要宜家账号。",
       "hero.ctaPrimary": "获取扩展程序",
       "hero.finePrint": "免费，数据完全不会离开你的设备。",
@@ -257,7 +257,7 @@
       "nav.features": "機能",
       "nav.faq": "よくある質問",
       "hero.eyebrow": "非公式の Chrome 拡張機能",
-      "hero.title": "ログイン不要の IKEA 買い物リスト",
+      "hero.title": "ログイン不要の<br>IKEA 買い物リスト",
       "hero.lead": "世界45カ国以上のIKEA公式サイトを見ながら商品をお気に入りに登録し、部屋ごとに整理。金額は自動集計され、最後にPDF書き出しやメール送信もできます——IKEAアカウントは一切不要です。",
       "hero.ctaPrimary": "拡張機能を入手",
       "hero.finePrint": "無料。データが端末の外に出ることはありません。",
@@ -910,11 +910,6 @@
   function detectLocale() {
     const stored = localStorage.getItem("ikeaLandingLocale");
     if (stored && DICTS[stored]) return stored;
-    const nav = (navigator.language || "en").toLowerCase();
-    if (nav.startsWith("zh-tw") || nav.startsWith("zh-hant")) return "zh-TW";
-    if (nav.startsWith("zh")) return "zh-CN";
-    const short = nav.slice(0, 2);
-    if (DICTS[short]) return short;
     return "en";
   }
 
