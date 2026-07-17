@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IKEA Shopping List Helper</title>
+<meta name="description" content="Favorite IKEA products across 45+ countries without logging in, organize by room, auto-total costs, and export to PDF or email.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%2212%22 fill=%22%230058A3%22/><path fill=%22%23FFDB00%22 d=%22M12.336 7.02c1.4-1.4 3.6-1.4 5 0 .75.75 1.1 1.7 1.06 2.65-.02 2.3-1.7 4.3-3.14 5.62-.75.68-1.5 1.24-2.05 1.6l-.86.53-.86-.53c-.55-.36-1.3-.92-2.05-1.6-1.43-1.32-3.12-3.32-3.13-5.62-.04-.95.3-1.9 1.05-2.65 1.4-1.4 3.6-1.4 5 0l.5.5.48-.5z%22/></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.336 5.52C14.23 3.62 17.31 3.62 19.2 5.52c1 1 1.47 2.33 1.42 3.63-.01 3.06-2.2 5.72-4.13 7.5-1 .91-2 1.65-2.75 2.16l-1.24.83-1.24-.83c-.75-.51-1.75-1.25-2.75-2.16-1.93-1.78-4.12-4.44-4.13-7.5-.05-1.3.42-2.63 1.42-3.63 1.9-1.9 4.97-1.9 6.87 0l.34.34.33-.34z"/></svg>
+      </span>
+      <span>IKEA Shopping List Helper</span>
+    </a>
+    <div class="nav-spacer"></div>
+    <nav class="nav-links">
+      <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
+    </nav>
+    <select class="lang-select" id="langSelect" aria-label="Language"></select>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Unofficial Chrome Extension</span>
+      <h1 data-i18n="hero.title">Your IKEA shopping list, without the login</h1>
+      <p class="lead" data-i18n="hero.lead">Favorite products while browsing IKEA's official sites in 45+ countries, organize them by room, watch the total add up automatically, and export to PDF or email — no IKEA account required.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/chienchitung/ikea-wishlist-extension" target="_blank" rel="noopener" data-i18n="hero.ctaPrimary">Get the extension</a>
+      </div>
+      <p class="fine-print" data-i18n="hero.finePrint">Free. Open source. Nothing ever leaves your device.</p>
+    </div>
+    <div class="mockup" aria-hidden="true">
+      <div class="mockup-head">
+        <span class="dot"></span>
+        <strong data-i18n="mockup.title">Shopping List</strong>
+      </div>
+      <div class="mockup-chips">
+        <span class="mockup-chip active">Bedroom</span>
+        <span class="mockup-chip">Living room</span>
+        <span class="mockup-chip">Kitchen</span>
+        <span class="mockup-chip">Office</span>
+      </div>
+      <div class="mockup-row">
+        <div class="mockup-thumb"></div>
+        <div class="mockup-lines"><div class="mockup-line"></div><div class="mockup-line short"></div></div>
+        <div class="mockup-price">$69</div>
+      </div>
+      <div class="mockup-row">
+        <div class="mockup-thumb"></div>
+        <div class="mockup-lines"><div class="mockup-line"></div><div class="mockup-line short"></div></div>
+        <div class="mockup-price">$129</div>
+      </div>
+      <div class="mockup-row">
+        <div class="mockup-thumb"></div>
+        <div class="mockup-lines"><div class="mockup-line"></div><div class="mockup-line short"></div></div>
+        <div class="mockup-price">$249</div>
+      </div>
+      <div class="mockup-foot">
+        <span class="label" data-i18n="mockup.total">Total</span>
+        <span class="value">$447</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="how.title">How it works</h2>
+      <p data-i18n="how.lead">Three steps, no account required.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3 data-i18n="how.step1.title">Click the heart</h3>
+        <p data-i18n="how.step1.desc">Use the heart icon that's already on every IKEA product card and product page — nothing new to learn.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3 data-i18n="how.step2.title">Pick a room</h3>
+        <p data-i18n="how.step2.desc">A small picker opens right there on the page. Choose a room and you're done — no redirect, no login.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3 data-i18n="how.step3.title">Track and export</h3>
+        <p data-i18n="how.step3.desc">Totals update live as you shop. When you're ready, export a print-ready PDF or email the whole list in one click.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="features.title">Everything you need, nothing you don't</h2>
+      <p data-i18n="features.lead">Built to disappear into the sites you already use.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12.34 5.52c1.9-1.9 4.97-1.9 6.87 0 2 2 2.1 5.2.2 7.32L12 20l-7.4-7.16c-1.9-2.12-1.8-5.32.2-7.32 1.9-1.9 4.97-1.9 6.87 0l.34.34.33-.34z"/></svg></div>
+        <h3 data-i18n="features.noLogin.title">No login required</h3>
+        <p data-i18n="features.noLogin.desc">Clicks on the native favorite button are intercepted before any login redirect can happen.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M3 10l9-7 9 7M5 9v10h14V9M9 21v-6h6v6"/></svg></div>
+        <h3 data-i18n="features.rooms.title">Organized by room</h3>
+        <p data-i18n="features.rooms.desc">12 built-in categories taken directly from IKEA's own "shop by room" menu, fully customizable.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 19h16M6 15V9m6 6V5m6 10v-4"/></svg></div>
+        <h3 data-i18n="features.totals.title">Automatic totals</h3>
+        <p data-i18n="features.totals.desc">Per-room subtotals and a grand total, updated live, matching the exact price shown on the official site.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg></div>
+        <h3 data-i18n="features.pdf.title">Export to PDF</h3>
+        <p data-i18n="features.pdf.desc">A print-ready page with an embedded backup you can restore from if your list is ever cleared.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg></div>
+        <h3 data-i18n="features.email.title">Email your list</h3>
+        <p data-i18n="features.email.desc">One click opens your own mail app with the list pre-filled — no third-party service involved.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg></div>
+        <h3 data-i18n="features.markets.title">Separate lists per market</h3>
+        <p data-i18n="features.markets.desc">Items added on one country's site never mix with another country's list.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M9 2v3M22 22l-5-10-5 10M14 18h6"/></svg></div>
+        <h3 data-i18n="features.languages.title">11 languages</h3>
+        <p data-i18n="features.languages.desc">The panel automatically matches the language of the IKEA site you're visiting.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <h3 data-i18n="features.planner.title">Works with IKEA Planner</h3>
+        <p data-i18n="features.planner.desc">Save BILLY, STORAGE ONE, and other custom designs to the same list.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M9 5H4v5M15 19h5v-5M4 5l16 14"/></svg></div>
+        <h3 data-i18n="features.duplicate.title">Duplicate-safe</h3>
+        <p data-i18n="features.duplicate.desc">The same product added from different pages is recognized and never added twice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band">
+      <div class="wrap">
+        <h2 data-i18n="cta.title">Start your list in the next 30 seconds</h2>
+        <p data-i18n="cta.lead">Install the extension, visit any supported IKEA site, and click a heart.</p>
+        <div class="cta-row" style="justify-content:center">
+          <a class="btn btn-primary" href="https://github.com/chienchitung/ikea-wishlist-extension" target="_blank" rel="noopener" data-i18n="cta.primary">Get the extension</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div style="font-weight:700;font-size:13.5px;margin-bottom:6px" data-i18n="footer.tagline">An independently built, unofficial tool.</div>
+      <p class="footer-disclaimer" data-i18n="footer.disclaimer">This extension is not affiliated with, endorsed by, or connected to Inter IKEA Systems B.V. in any way.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
