@@ -72,6 +72,13 @@ in the header dropdown. The site always opens in **English** by default;
 once a visitor picks another language it's persisted in `localStorage`, so
 the choice stays consistent across `index.html` and `privacy.html`.
 
+## Deployment
+
+Deployed on Vercel as a static site (no build step). `vercel.json` enables
+`cleanUrls`, so `privacy.html` is served at `/privacy` and any request to
+a `.html` URL 308-redirects to its extensionless form. Internal links
+(`/`, `/privacy`) already point at the clean paths.
+
 ## Running locally
 
 This is a static site with no dependencies or build step. Serve the
@@ -81,6 +88,11 @@ directory with any static file server, for example:
 python3 -m http.server 8000
 # then open http://localhost:8000
 ```
+
+Note: a plain static file server like the one above serves files by their
+literal name (`/index.html`, `/privacy.html`), not the clean `/` and
+`/privacy` URLs — that rewriting only happens on Vercel via `vercel.json`.
+Run `vercel dev` instead if you need to test the clean URLs locally.
 
 ## Disclaimer
 
