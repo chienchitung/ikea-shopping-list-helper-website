@@ -27,7 +27,7 @@ into a login-free way to build a shopping list.
 - **Email your list** — one click opens your own mail app with the list
   pre-filled, no third-party service involved.
 - **Separate lists per market** — items added on one country's IKEA site
-  never mix with another country's list (45+ countries supported).
+  never mix with another country's list (64+ countries supported).
 - **11 languages** — the panel automatically matches the language of the
   IKEA site you're visiting.
 - **Works with IKEA Planner** — save BILLY, STORAGE ONE, and other custom
