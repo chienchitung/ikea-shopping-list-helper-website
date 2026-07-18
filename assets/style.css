@@ -194,16 +194,13 @@ section { padding: 56px 0; }
 .cta-band .btn-outline:hover { box-shadow: inset 0 0 0 1.5px #fff; }
 
 /* ---- footer ---- */
-.site-footer { border-top: 1px solid var(--border-disabled); padding: 36px 0 28px; margin-top: 24px; }
-.footer-top { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; justify-content: space-between; }
-.footer-about { max-width: 640px; }
-.footer-tagline { font-weight: 700; font-size: 13.5px; margin-bottom: 6px; }
-.footer-disclaimer { font-size: 12px; color: var(--ink-disabled); line-height: 1.6; margin: 0; }
-.footer-links { display: flex; gap: 20px; flex-wrap: wrap; flex: none; }
+.site-footer { border-top: 1px solid var(--border-disabled); padding: 28px 0; margin-top: 24px; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+.footer-copyright { font-size: 12px; color: var(--ink-disabled); margin: 0; }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
 .footer-link { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: 13px; font-weight: 600; color: var(--ink-secondary); }
 .footer-link:hover { color: var(--ink); }
 .footer-link-icon { width: 16px; height: 16px; flex: none; }
-.footer-copyright { font-size: 12px; color: var(--ink-disabled); margin: 20px 0 0; padding-top: 20px; border-top: 1px solid var(--border-disabled); }
 
 /* ---- privacy page ---- */
 .legal { padding: 48px 0 80px; }
