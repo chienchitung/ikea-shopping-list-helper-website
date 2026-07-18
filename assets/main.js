@@ -1,5 +1,5 @@
 /**
- * main.js — shared language-switcher and FAQ-accordion wiring for index.html and privacy.html.
+ * main.js — shared language-switcher, FAQ-accordion, and footer wiring for index.html and privacy.html.
  *
  * Locale choice persists via localStorage (see i18n.js's setLocale/detectLocale), so
  * switching language on one page and following a link to the other keeps the same
@@ -36,4 +36,7 @@
       btn.setAttribute("aria-expanded", String(open));
     });
   });
+
+  const copyrightYear = document.getElementById("copyrightYear");
+  if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
 })();
