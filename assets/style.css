@@ -11,6 +11,7 @@
  */
 
 :root {
+  color-scheme: light;
   --ikea-blue: #0058A3;
   --ikea-blue-hover: #004F93;
   --ikea-blue-press: #003E72;
@@ -31,23 +32,6 @@
   --shadow-soft: 0 2px 10px rgba(17, 17, 17, .06);
   --ease: cubic-bezier(.4, 0, .2, 1);
   --max-width: 1120px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --surface: #1E1E1E;
-    --surface-alt: #171717;
-    --surface-hover: #292929;
-    --border-disabled: #3A3A3A;
-    --ink: #F2F2F2;
-    --ink-secondary: #B8B8B8;
-    --ink-disabled: #7A7A7A;
-    --ikea-blue: #4C9AE8;
-    --ikea-blue-hover: #6BAEEF;
-    --ikea-blue-press: #3D82CC;
-    --shadow-pop: 0 8px 24px rgba(0, 0, 0, .5);
-    --shadow-soft: 0 2px 10px rgba(0, 0, 0, .3);
-  }
 }
 
 * { box-sizing: border-box; }
